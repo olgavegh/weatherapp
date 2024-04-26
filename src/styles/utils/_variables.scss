@@ -1,0 +1,78 @@
+$breakpoints: (
+  "xs": 0,
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1600px,
+);
+
+@mixin xs {
+  @media (min-width: map-get($breakpoints, "xs")) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (min-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}
+@mixin xxl {
+  @media (min-width: map-get($breakpoints, "xxl")) {
+    @content;
+  }
+}
+
+@mixin breakpoint($bp: 0) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+/* --- Box Shadow --- */
+// -- Placeholder -- box shadow default placeholder
+%box-shadow-ready {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+%box-shadow-hover {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.175);
+}
+// -- Placeholder -- box-shadow
+%box-shadow {
+  @extend %box-shadow-ready;
+  transition: box-shadow 0.5s ease;
+  &:hover {
+    @extend %box-shadow-hover;
+  }
+}
+
+/* --- Attached Field to Left --- */
+$btn-border-radius: 1em;
+%border-radius-left {
+  border-top-left-radius: $btn-border-radius !important;
+  border-bottom-left-radius: $btn-border-radius !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+%border-radius-right {
+  border-top-right-radius: $btn-border-radius !important;
+  border-bottom-right-radius: $btn-border-radius !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}

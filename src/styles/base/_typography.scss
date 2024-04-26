@@ -1,0 +1,68 @@
+@use "../utils";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+}
+h1 {
+  font-size: clamp(2.5rem, 2.2143rem + 1.4286vw, 3.5rem); // 40px
+  line-height: 1.2; // 48px
+  font-weight: bold;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-xs);
+}
+
+h2 {
+  font-size: clamp(2rem, 1.7143rem + 1.4286vw, 3rem); // 32px
+  line-height: 1.25; // 40px
+  font-weight: bold;
+  letter-spacing: -0.05em;
+  margin-bottom: var(--space-xs);
+}
+
+p,
+li,
+input {
+  font-size: clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem); // 16px
+  line-height: 1.6;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+
+small,
+label {
+  font-size: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem); // 14px
+  font-weight: normal;
+  letter-spacing: 0;
+}
+label {
+  line-height: 1;
+}
+small {
+  line-height: 1.6;
+}
+
+.label {
+  font-size: clamp(0.5rem, 0.8393rem + 0.1786vw, 0.8rem); // 8px
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+}
+
+sup {
+  font-size: 58%;
+}
+
+strong {
+  font-weight: bolder;
+}

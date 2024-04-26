@@ -1,0 +1,65 @@
+// brand colors
+$color-primary-500: hsla(165, 89%, 40%, 1);
+$color-primary-400: hsla(165, 89%, 40%, 0.8);
+$color-primary-300: hsla(165, 89%, 40%, 0.6);
+$color-primary-200: hsla(165, 89%, 40%, 0.2);
+$color-primary-100: hsla(165, 89%, 40%, 0.05);
+
+$color-secondary-500: hsla(12, 80%, 60%, 1);
+
+// neutrals
+$color-text-neutrals-strong: hsla(165, 40%, 10%, 0.9);
+$color-text-neutrals-weak: hsla(165, 40%, 10%, 0.6);
+
+$color-stroke-neutrals-strong: hsla(165, 40%, 10%, 0.45);
+$color-stroke-neutrals-weak: hsla(165, 40%, 10%, 0.1);
+
+$color-fill-neutrals: hsla(165, 40%, 10%, 0.05);
+
+// backgrounds
+$color-background-base: hsla(0, 0%, 98%, 1);
+$color-background-raised: hsla(0, 0%, 98%, 1);
+$color-background-overlay: hsla(0, 0%, 98%, 1);
+
+// components
+$color-button-fill: $color-primary-500;
+$color-button-text: $color-background-base; // 4.5:1 ratio min
+
+$color-field-fill: $color-fill-neutrals;
+$color-field-text: $color-text-neutrals-weak; // 4.5:1 ratio min
+$color-field-stroke: $color-stroke-neutrals-strong;
+$color-field-stroke-focus: $color-primary-300;
+
+$color-text-stronger: $color-secondary-500;
+
+// semantic colors
+$color-text-error: hsla(0, 56%, 50%, 1);
+$color-stroke-error-strong: hsla(0, 56%, 50%, 0.8);
+$color-stroke-error-weak: hsla(0, 56%, 50%, 0.2);
+$color-fill-error: hsla(0, 56%, 50%, 0.05);
+
+$color-text-warning: hsla(42, 82%, 56%, 1);
+$color-stroke-warning-strong: hsla(42, 82%, 56%, 0.8);
+$color-stroke-warning-weak: hsla(42, 82%, 56%, 0.2);
+$color-fill-warning: hsla(42, 82%, 56%, 0.05);
+
+$color-text-success: hsla(162, 95%, 48%, 1);
+$color-stroke-success-strong: hsla(162, 95%, 48%, 0.8);
+$color-stroke-success-weak: hsla(162, 95%, 48%, 0.2);
+$color-fill-success: hsla(162, 95%, 48%, 0.05);
+
+* {
+  color: $color-text-neutrals-weak;
+}
+
+h1,
+h2 {
+  color: $color-text-neutrals-strong;
+}
+
+strong {
+  color: $color-text-stronger;
+}
+sup {
+  color: inherit;
+}

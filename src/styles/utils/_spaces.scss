@@ -1,0 +1,22 @@
+// Import your variables
+@use "variables" as v;
+$spacing-scales: (
+  "xs": 0.5,
+  "s": 1,
+  "m": 1.5,
+  "l": 2,
+  "xl": 3,
+  "xxl": 5,
+);
+
+:root {
+  @each $level, $value in $spacing-scales {
+    --space-#{$level}: calc(
+      clamp(
+        #{$value} * 1rem,
+        #{$value} * 1rem + #{$value} * 0.25vw,
+        #{$value} * 1.4rem
+      )
+    );
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "sass": "^1.75.0"
+  },
+  "dependencies": {
+    "utopia-core-scss": "^1.0.1"
+  }
+}

@@ -1,0 +1,44 @@
+@use "../base";
+@use "../utils";
+
+button,
+.btn {
+  cursor: pointer;
+
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: bold;
+  border-radius: utils.$btn-border-radius;
+  padding: 1em 2.75em;
+  height: fit-content;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &.btn-primary {
+    background: base.$color-button-fill;
+    color: base.$color-button-text;
+    border: none;
+  }
+  &.btn-secondary {
+    background: transparent;
+    color: base.$color-button-fill;
+    border: 2px solid base.$color-button-fill;
+  }
+  &.btn-tertiary {
+    background: transparent;
+    color: base.$color-button-fill;
+    text-decoration: underline;
+    border: none;
+  }
+  &:hover,
+  &:focus {
+    @extend %box-shadow;
+  }
+
+  //   &:active {
+  //   }
+}

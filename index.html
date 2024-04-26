@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Weather App</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Olga Vegh">
+    <link rel="icon" href="./src/assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Primary Meta Tags -->
+    <title>My First Weather Application</title>
+    <meta name="title" content="My First Weather Application" />
+    <meta name="description"
+        content="I wanted to practice Sass architecture and API requests, so I started working on the rainy weather application." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://127.0.0.1:3000/index.html" />
+    <meta property="og:title" content="My First Weather Application" />
+    <meta property="og:description"
+        content="I wanted to practice Sass architecture and API requests, so I started working on the rainy weather application." />
+    <meta property="og:image" content="./src/assets/images/preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="http://127.0.0.1:3000/index.html" />
+    <meta property="twitter:title" content="My First Weather Application" />
+    <meta property="twitter:description"
+        content="I wanted to practice Sass architecture and API requests, so I started working on the rainy weather application." />
+    <meta property="twitter:image" content="./src/assets/images/preview.png" />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
+
+    <!-- CSS with Sass -->
+    <link rel="stylesheet" type="text/css" href="src/styles/styles.css">
+    <!-- JS -->
+    <script type="module" src="src/scripts/cityStore.js" defer></script>
+    <script type="module" src="src/scripts/currentWeather.js" defer></script>
+    <script type="module" src="src/scripts/date.js" defer></script>
+    <script type="module" src="src/scripts/forecastWeather.js" defer></script>
+    <script type="module" src="src/scripts/debug.js" defer></script>
+</head>
+
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="app">
+        <div class="container">
+            <div class="weather">
+                <header class="row-nav">
+                    <a class="logo" href="https://www.olgavegh.github.io/" target="_blank"
+                        rel="noopener noreferrer"><img src="./src/assets/images/logo-bw-dark.png"
+                            alt="Olga Vegh Logo"></a>
+                    <div class="label">PRACTICE JS Requests - Weather App I.</div>
+                </header>
+
+                <form>
+                    <div class="row full">
+                        <label for="cityInput" class="grow">
+                            <input id="cityInput" type="search" placeholder="Enter a city.."
+                                class="search-input right-attached full">
+                            <label for="cityInput" data-type="warning" id="error"></label>
+                        </label>
+                        <input type="submit" value="Search" class="btn btn-primary left-attached">
+                    </div>
+                </form>
+                <!-- Current Weather Data -->
+                <section id="weather-current" class="row">
+                    <!-- Current Weather elements will be dynamically added here -->
+                </section>
+                <!-- 5 Day Forecast -->
+                <section id="weather-forecast" class="row">
+                    <!-- Forecast elements will be dynamically added here -->
+                </section>
+                <footer>
+                    <small>Weather data provided by OpenWeatherMap API.</small>
+                </footer>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

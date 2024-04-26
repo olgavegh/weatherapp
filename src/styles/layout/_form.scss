@@ -1,0 +1,59 @@
+@use "../base";
+@use "../utils";
+
+form {
+  border-bottom: 1px solid base.$color-stroke-neutrals-weak;
+  margin: var(--space-l) 0;
+}
+
+.left-attached {
+  @extend %border-radius-right; // Extend placeholder for right border-radius
+}
+
+.right-attached {
+  @extend %border-radius-left; // Extend placeholder for left border-radius
+}
+
+input {
+  border-radius: utils.$btn-border-radius;
+  background-color: base.$color-field-fill;
+  border: 1px solid base.$color-field-stroke;
+  color: base.$color-field-text;
+  padding: 1em;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+
+  display: inline-block;
+  vertical-align: middle;
+  appearance: none;
+
+  outline-offset: -2px;
+}
+input[type="search"]::placeholder {
+  color: base.$color-field-text;
+  opacity: 0.5;
+}
+
+input[type="search"] {
+  font-size: 0.9rem;
+}
+
+input:focus:not(.btn),
+textarea:focus {
+  /* Additional highlight for focused elements */
+  outline: none;
+  box-shadow: 0 0 3px 1px base.$color-field-stroke-focus;
+  font-weight: 300;
+}
+
+label[data-type="warning"] {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em;
+  font-size: smaller;
+  // border: 1px solid base.$color-stroke-warning-strong;
+  // background: base.$color-fill-warning;
+  color: base.$color-text-error;
+}
+

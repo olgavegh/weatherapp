@@ -1,0 +1,76 @@
+@use "./vendors";
+@use "./base";
+@use "./components";
+@use "./layout";
+@use "./utils";
+
+:root {
+  font-size: 12px;
+  @include utils.sm {
+    font-size: 16px;
+  }
+}
+body {
+  background-image: url(https://images.unsplash.com/photo-1504608524841-42fe6f032b4b);
+  background-size: cover;
+  background-position: top;
+}
+.weather {
+  @extend %box-shadow;
+  background-color: base.$color-background-base;
+  border-radius: 1rem;
+  padding: var(--space-l);
+}
+header {
+  margin-bottom: var(--space-m);
+  color: base.$color-text-neutrals-weak;
+}
+.logo {
+  img {
+    max-width: var(--space-l);
+    vertical-align: middle;
+  }
+}
+
+#weather-current {
+  .temperature-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    h1 {
+      margin-block: var(--space-xs);
+    }
+  }
+
+  #desc {
+    text-transform: capitalize;
+    text-align: right;
+  }
+}
+
+#weather-forecast {
+  text-align: center;
+
+  .forecast-temperature-min {
+    margin-left: var(--space-xs);
+    opacity: 0.6;
+  }
+}
+
+.icon {
+  width: 60px;
+  height: auto;
+  @include utils.md {
+    width: 80px;
+  }
+  @include utils.lg {
+    width: 100px;
+  }
+}
+
+footer {
+  border-top: 1px solid base.$color-stroke-neutrals-weak;
+  padding-top: var(--space-xs);
+  text-align: center;
+}
